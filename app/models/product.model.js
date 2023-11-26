@@ -45,7 +45,7 @@ Product.getAll = (title, result) => {
   if (title) {
     query += ` WHERE title LIKE '%${title}%'`;
   }
-
+  
   sql.query(query, (err, res) => {
     if (err) {
       console.log("error: ", err);

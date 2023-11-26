@@ -1,11 +1,7 @@
 module.exports = app => {
     const products = require("../controllers/product.controller.js");
   
-    const express = require('express');
-
-    var router = express.Router();
-
-    router.use(express.json());
+    var router = require("express").Router();
 
     // Retrieve all products
     router.get("/", products.findAll);

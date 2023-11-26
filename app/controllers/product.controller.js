@@ -46,7 +46,7 @@ exports.create = (req, res) => {
   const product = new Product({
     title: req.body.title,
     description: req.body.description,
-    published: req.body.price
+    price: req.body.price
   });
 
   // Save Product in the database
