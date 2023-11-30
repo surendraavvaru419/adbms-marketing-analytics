@@ -1,7 +1,7 @@
 const sql = require("./db.js");
 
 // constructor
-const User = function(user) {
+const User = function (user) {
   this.first_name = user.first_name;
   this.last_name = user.last_name;
   this.username = user.username;
@@ -46,7 +46,7 @@ User.getAll = (username, result) => {
   if (username) {
     query += ` WHERE username LIKE '%${username}%'`;
   }
-  
+
   sql.query(query, (err, res) => {
     if (err) {
       console.log("error: ", err);

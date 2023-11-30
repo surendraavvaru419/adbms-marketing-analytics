@@ -1,7 +1,7 @@
 const sql = require("./db.js");
 
 // constructor
-const Order = function(order) {
+const Order = function (order) {
   this.user_id = order.user_id;
   this.created_at = order.created_at;
   this.total_amount = order.total_amount;
@@ -42,10 +42,10 @@ Order.findById = (id, result) => {
 Order.getAll = (result) => {
   let query = "SELECT * FROM orders";
 
-//   if (username) {
-//     query += ` WHERE username LIKE '%${username}%'`;
-//   }
-  
+  //   if (username) {
+  //     query += ` WHERE username LIKE '%${username}%'`;
+  //   }
+
   sql.query(query, (err, res) => {
     if (err) {
       console.log("error: ", err);

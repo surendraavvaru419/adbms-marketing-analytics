@@ -1,7 +1,7 @@
 const sql = require("./db.js");
 
 // constructor
-const OrderDetail = function(orderDetail) {
+const OrderDetail = function (orderDetail) {
   this.order_id = orderDetail.order_id;
   this.product_id = orderDetail.product_id;
 };
@@ -40,7 +40,7 @@ OrderDetail.findById = (id, result) => {
 
 OrderDetail.getAll = (result) => {
   let query = "SELECT * FROM orderdetails";
-  
+
   sql.query(query, (err, res) => {
     if (err) {
       console.log("error: ", err);

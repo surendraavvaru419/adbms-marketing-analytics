@@ -1,7 +1,7 @@
 const sql = require("./db.js");
 
 // constructor
-const Product = function(product) {
+const Product = function (product) {
   this.title = product.title;
   this.description = product.description;
   this.price = product.price;
@@ -45,7 +45,7 @@ Product.getAll = (title, result) => {
   if (title) {
     query += ` WHERE title LIKE '%${title}%'`;
   }
-  
+
   sql.query(query, (err, res) => {
     if (err) {
       console.log("error: ", err);

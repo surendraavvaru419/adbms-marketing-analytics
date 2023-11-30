@@ -16,8 +16,8 @@ exports.findAll = (req, res) => {
 
 // Find a single Product by Id
 exports.findOne = (req, res) => {
-    console.log("REQ IP: ", req.ip)
-    Product.findById(req.params.id, (err, data) => {
+  console.log("REQ IP: ", req.ip)
+  Product.findById(req.params.id, (err, data) => {
     if (err) {
       if (err.kind === "not_found") {
         res.status(404).send({

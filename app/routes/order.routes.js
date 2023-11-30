@@ -1,11 +1,11 @@
 module.exports = app => {
     const orders = require("../controllers/order.controller.js");
-  
+
     var router = require("express").Router();
 
     // Retrieve all orders
     router.get("/", orders.findAll);
-  
+
     // Retrieve a single order with id
     router.get("/:id", orders.findOne);
 
